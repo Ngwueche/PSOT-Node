@@ -1,7 +1,7 @@
 let {dataStore} = require('./txn')
 
 // Get the timeStamp from dataStore
-const unixDateObject = dataStore.filter((element, index) =>{
+const unixDateObject = dataStore.filter((element) =>{
     return element.TimeStamp;
 })
 
@@ -37,13 +37,13 @@ const updateTransaction = () => {
 // Update an existing Transaction
 
 // Get All transactions by type (Withdraw/  Deposit ✅ )
-const depositTransaction = dataStore.filter((element, index) =>{
+const depositTransaction = dataStore.filter((element) =>{
         return element.TransactionType === 'DEPOSIT' 
 })
 
 
 // Bonus: Get all transactions done on a particular date
-const transactionByDate = dataStore.filter((element, index)=>{
+const transactionByDate = dataStore.filter((element)=>{
     
 });
 
@@ -52,7 +52,7 @@ const len = dataStore.length;
 console.log(len)
 
 // Total amount of depositTransaction
-const totalDeposit = depositTransaction.filter((element, index) =>{
+const totalDeposit = depositTransaction.filter((element) =>{
     return element.Token ===  "XRP"
     // return element.Token ===  "ETH"
     // return element.Token ===  "BTC"
