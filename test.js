@@ -28,14 +28,26 @@ const addTransaction = () => dataStore.push(newTransaction)
 const deleteTransaction = () => dataStore.pop({});
 
 // Get A transaction by Id
-const updateTransaction = () => {
- for(let i =0; i< len; i++){
-    dataStore.timeStamp ==="";
- }
-
+const updateTransaction = (id) =>{
+for(i =1; i<dataStore.length; i++){
+    if(dataStore[i].TimeStamp === id){
+        return console.log(id)
+    }
 }
-// Update an existing Transaction
+updateTransaction('1571965892')
 
+
+// Update an existing Transaction
+const updateTransactionElement=(tran)=>{
+        dataStore.map((element) => {
+        if(element.TimeStamp === ts){
+            element.Token = 'BTC'
+            return console.log(element)
+        }
+    })
+}
+updateTransactionElement('157196589')
+    
 // Get All transactions by type (Withdraw/  Deposit ✅ )
 const depositTransaction = dataStore.filter((element) =>{
         return element.TransactionType === 'DEPOSIT' 
