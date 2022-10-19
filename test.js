@@ -63,11 +63,10 @@ const transactionByDate = dataStore.filter((element)=>{
 const len = dataStore.length;
 console.log(len)
 
-// Total amount of depositTransaction
-const totalDeposit = depositTransaction.filter((element) =>{
+const getTokenTransaction = depositTransaction.filter((element) =>{
     return element.Token ===  "XRP"
     // return element.Token ===  "ETH"
     // return element.Token ===  "BTC"
     
 }) 
-console.log(totalDeposit)
+console.log(getTokenTransaction)
