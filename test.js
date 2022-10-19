@@ -25,8 +25,14 @@ const getAllTransactions = ()=> dataStore
 const addTransaction = () => dataStore.push(newTransaction)
 
 // Add a delete transaction
-const deleteTransaction = () => dataStore.pop({});
-
+const deleteTransaction = (id) => {
+   for(i =1; i<dataStore.length; i++){
+    if(dataStore[i].TimeStamp === id){
+        dataStore.pop(id)
+    }
+};
+deleteTransaction("1571966421")
+    
 // Get A transaction by Id
 const updateTransaction = (id) =>{
 for(i =1; i<dataStore.length; i++){
