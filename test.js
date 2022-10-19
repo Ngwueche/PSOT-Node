@@ -1,4 +1,4 @@
-let {dataStore} = require('./txn')
+let dataStore = require('./txn')
 
 // Get the timeStamp from dataStore
 const unixDateObject = dataStore.filter((element) =>{
